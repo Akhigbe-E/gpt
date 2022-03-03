@@ -1,0 +1,111 @@
+.gpt3 {
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 2rem 6rem;
+        p {
+            color: #FFF;   
+            font-family: var(--font-family);
+            font-weight: 500;
+            line-height: 25px;
+            text-transform: capitalize;  
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+        &-links {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            &_logo {
+                margin-right: 2rem;
+                img {
+                    width: 62.56px;
+                    height:16.02px
+                }
+            }
+            &_container {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        &-sign {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &-menu {
+            margin-left: 1rem;
+            display: none;
+            position: relative;
+            &_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                text-align: end;
+                background: var(--color-footer);
+                padding: 2rem;
+                position: absolute;
+                right: 0;
+                margin-top: 1rem;
+                min-width: 210px;
+                border-radius: 5px;
+                box-shadow: 0 0 5 rgba(0,0,0,0.2);
+                p {
+                    margin: 1rem 0;
+                }
+                &-links-sign {
+                    display: none;
+                }
+            }
+            svg {
+                cursor: pointer;
+            }
+
+        }
+        &-sign button, &-menu button {
+            padding: 0.5rem 1rem;
+            color: #FFF;
+            background-color: #FF4820;
+            font-family: var(--font-family);
+            font-weight: normal;
+            line-height: 25px;
+            font-size: 18px;
+            border: 0;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .gpt3__navbar-links_container {
+        display: none;
+    }
+    .gpt3__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gpt3__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gpt3__navbar {
+        padding: 2rem;
+        &-sign {
+            display: none;
+        }
+        &-menu_container {
+            top: 20px;
+            &-links-sign {
+                display: block;
+            }
+        }
+    }
+}
